@@ -1,0 +1,23 @@
+@import "shared/variables.scss";
+
+header, footer {
+  background-color: $main-background;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  height: $desktop-footer-height;
+}
+
+header {
+  height: $desktop-header-height;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
