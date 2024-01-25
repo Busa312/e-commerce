@@ -1,0 +1,35 @@
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 64px;
+  div {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+  }
+  .categories {
+    overflow-x: scroll;
+  }
+
+  .categories::-webkit-scrollbar {
+    width: 2px;
+    border-radius: 3px;
+  }
+
+  .categories::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  .categories::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+  }
+
+  .categories::-webkit-scrollbar-thumb:hover {
+    background-color: #c1c1c1;
+  }
+}
+
+

@@ -1,1 +1,14 @@
-<p>home works!</p>
+<section>
+  <h2>Categories</h2>
+  <div class="categories">
+    <ng-container *ngFor="let cat of categories">
+      <app-home-card [isCategory]="true" [category]="cat"></app-home-card>
+    </ng-container>
+  </div>
+  <h2>New Products</h2>
+  <div class="products">
+    <ng-container *ngFor="let prod of newProducts">
+      <app-home-card [product]="prod"></app-home-card>
+    </ng-container>
+  </div>
+</section>

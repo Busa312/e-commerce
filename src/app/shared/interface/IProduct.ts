@@ -1,6 +1,6 @@
-import {Category} from "./category";
+import {ICategory} from "./ICategory";
 
-export interface Product {
+export interface IProduct {
   id?: number;
   title: string;
   price: number;
@@ -8,5 +8,5 @@ export interface Product {
   images: string[];
   creationAt: string;
   updatedAt: string;
-  category: Category;
+  category: ICategory;
 }
