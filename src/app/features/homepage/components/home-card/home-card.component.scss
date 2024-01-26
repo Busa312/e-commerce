@@ -1,0 +1,35 @@
+@import '../../../../shared/variables.scss';
+@media screen and (max-width: $tablet-max) {
+  .img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: $tablet-max) {
+  .img {
+    height: 172px;
+  }
+}
+img {
+  border-radius: 8px;
+}
+
+.category {
+  position: relative;
+  border-radius: 8px;
+  min-height: 172px;
+  min-width: 100px;
+  &>div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: $secondary-color-light;
+    padding: 5px;
+    -moz-border-radius-bottomleft: 8px;
+    border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

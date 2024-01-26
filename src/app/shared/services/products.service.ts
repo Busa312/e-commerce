@@ -15,8 +15,8 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   public getProducts(offset? : number, limit= 16): Observable<IProduct[]> {
-    let url = offset? this.URL + `/?offset=${offset}&limit=${limit}` : this.URL;
-    return (this.http.get(url) as Observable<IProduct[]>).pipe(
+    return (this.http.get(offset? this.URL + `/?offset=${offset}&limit=${limit}` : this.URL) as Observable<IProduct[]>)
+      .pipe(
       tap(
         val => {
           if (offset === undefined) {

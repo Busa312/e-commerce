@@ -8,7 +8,12 @@
   <h2>New Products</h2>
   <div class="products">
     <ng-container *ngFor="let prod of newProducts">
-      <app-home-card [product]="prod"></app-home-card>
+      <div class="product-card">
+        <app-home-card [product]="prod"></app-home-card>
+      </div>
     </ng-container>
+    <div class="all-products">
+      <h3>All Products</h3>
+    </div>
   </div>
 </section>
