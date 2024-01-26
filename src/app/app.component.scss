@@ -2,6 +2,41 @@
 
 header, footer {
   background-color: $main-background;
+  padding: 8px 36px;
+  color: whitesmoke;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: $desktop-header-height;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: $main-light;
+    }
+  }
+
+  .active, a:hover {
+    position: relative;
+    color: $main-light;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $main-light;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
 }
 
 main {
@@ -10,10 +45,29 @@ main {
 
 footer {
   height: $desktop-footer-height;
-}
+  color: whitesmoke;
+  display: flex;
+  @media screen and (max-width: $mobile-max) {
+    flex-direction: column;
+  }
 
-header {
-  height: $desktop-header-height;
+  div {
+    padding: 20px;
+    a {
+      text-decoration: none;
+      color: lightblue;
+      :hover {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+    }
+  }
+  div:last-child {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 section {

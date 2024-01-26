@@ -1,7 +1,21 @@
 <section>
-  <header></header>
+  <header>
+    <a [routerLink]="'/home'" [routerLinkActive]="'active'">Home</a>
+    <a [routerLink]="'/products'" [routerLinkActive]="'active'">Products</a>
+    <a *ngIf="!(isLoggedIn | async)">Login/Register</a>
+  </header>
   <main>
     <router-outlet></router-outlet>
   </main>
-  <footer></footer>
+  <footer>
+    <div>
+      This web-site is made using fake data from <a href="https://fakeapi.platzi.com/"> Platzi Fake Store</a>
+    </div>
+    <div>
+      <h4>Contact Me:</h4>
+      <p>email: <a href="mailto:besarionigadelia@gmail.com" target="_blank">besarionigadelia&#64;gmail.com</a></p>
+      <p>linkedIn: <a href="https://www.linkedin.com/in/besarioni-gadelia-334537217" target="_blank">Besarioni Gadelia</a></p>
+      <p>Github: <a href="https://github.com/Busa312" target="_blank">Busa312</a></p>
+    </div>
+  </footer>
 </section>

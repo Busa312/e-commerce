@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit{
           allProducts = allProducts
               .sort(
                 (a,b) =>
-                  new Date(a.creationAt).getMilliseconds() - new Date(b.creationAt).getMilliseconds()
+                  new Date(a.updatedAt).getMilliseconds() - new Date(b.updatedAt).getMilliseconds()
               );
           this.newProducts = allProducts.slice(0, 4);
         }

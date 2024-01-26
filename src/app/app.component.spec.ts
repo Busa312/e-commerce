@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {UserService} from "./core/user.service";
 
 describe('AppComponent', () => {
   let fixture: any;
@@ -12,6 +13,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        {
+          provide: UserService
+        }
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
   });
