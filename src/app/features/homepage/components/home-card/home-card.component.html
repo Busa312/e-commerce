@@ -1,12 +1,12 @@
 
 <ng-container *ngIf="isCategory; else isProduct">
   <div class="category">
-    <img [src]="getCategoryImage()" height="172px" alt="category image">
+    <img [src]="getCategoryImage() | safe" height="172px" alt="category image">
     <div>{{category?.name}}</div>
   </div>
 </ng-container>
 <ng-template #isProduct>
   <div class="product">
-    <img class="img" [src]="getProductImage()" alt="product image">
+    <img class="img" [src]="getProductImage() | safe" alt="product image">
   </div>
 </ng-template>

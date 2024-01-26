@@ -2,7 +2,9 @@
   <h2>Categories</h2>
   <div class="categories">
     <ng-container *ngFor="let cat of categories">
-      <app-home-card [isCategory]="true" [category]="cat"></app-home-card>
+      <div class="category">
+        <app-home-card [isCategory]="true" [category]="cat"></app-home-card>
+      </div>
     </ng-container>
   </div>
   <h2>New Products</h2>

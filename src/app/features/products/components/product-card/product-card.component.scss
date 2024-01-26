@@ -1,0 +1,23 @@
+@import "../../../../shared/variables.scss";
+
+.product-card {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+  border-radius: 8px;
+  width: 198px;
+  gap: 8px;
+  img {
+    height: 172px;
+    width: 172px;
+    border-radius: 8px;
+  }
+  h3 {
+    word-break: break-word;
+  }
+  h4 {
+    align-self: flex-end;
+  }
+}
+

@@ -1,0 +1,40 @@
+@import "../../../../shared/variables.scss";
+
+.filters {
+  padding: 24px 64px;
+  display: flex;
+  justify-content: center;
+  // reset default styles
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+  }
+
+  /* Custom styles */
+  select {
+    padding: 8px;
+    border: 1px solid $main-light;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    width: 200px;
+  }
+
+  select:hover,
+  select:focus {
+    border-color: $secondary-color;
+    outline: none;
+  }
+}
+
+.products-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-bottom: 24px;
+}

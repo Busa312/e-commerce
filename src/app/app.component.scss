@@ -44,10 +44,10 @@ main {
 }
 
 footer {
-  height: $desktop-footer-height;
+  min-height: $desktop-footer-height;
   color: whitesmoke;
   display: flex;
-  @media screen and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-max-small) {
     flex-direction: column;
   }
 
@@ -67,6 +67,9 @@ footer {
     flex: 1;
     flex-direction: column;
     align-items: flex-end;
+    @media screen and (max-width: $mobile-max) {
+      align-items: flex-start;
+    }
   }
 }
 
